@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubermatic-dl-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubermatic-dl
+  template:
+    metadata:
+      labels:
+        app: kubermatic-dl
+    spec:
+      containers:
+      - name: kubermatic-dl
+        image: fabiancr.azurecr.io/kubermatic-dl:v3
+        ports:
+        - containerPort: 5000

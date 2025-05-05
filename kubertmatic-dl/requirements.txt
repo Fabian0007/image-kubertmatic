@@ -1,0 +1,7 @@
+flask
+gluoncv==0.10.5
+matplotlib
+mxnet==1.9.1
+requests
+Pillow
+numpy==1.19.5
